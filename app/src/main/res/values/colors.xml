@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_red">#FFF44336</color>
+    <color name="primary_yellow">#FFFFBE00</color>
+    <color name="primary_blue">#FF4285F4</color>
+
+    <color name="black_primary">#DE000000</color>    <!-- 87% -->
+    <color name="black_secondary">#89000000</color>    <!-- 54% -->
+    <color name="black_disable">#60000000</color>    <!-- 38% -->
+
+    <color name="white_primary">#FFFFFFFF</color>    <!-- 100 -->
+    <color name="white_secondary">#B3FFFFFF</color>    <!-- 70% -->
+
+    <color name="tab_icon_color">#FF999999</color>
+</resources>
