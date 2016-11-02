@@ -6,4 +6,10 @@
         android:orderInCategory="100"
         android:title="Setting"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_full_scan"
+        android:icon="@color/transparent"
+        android:orderInCategory="100"
+        android:title="FullScan"
+        app:showAsAction="always" />
 </menu>

@@ -12,10 +12,16 @@ import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+/**
+ * Author JackSparrow
+ * Create Date 01/11/2016.
+ */
 
 public class MainActivity extends AppCompatActivity {
     public static final int TAB_BOOST = 0;
@@ -71,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             }
@@ -107,6 +112,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_full_scan:
+                FullScanView fullScanView = (FullScanView) findViewById(R.id.full_scan);
+                fullScanView.startAnimation(lastSelectTab);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private View loadUnselectedTabView(int position) {
@@ -155,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
         TextView title = (TextView) tabView.findViewById(R.id.title);
         AppCompatImageView icon = (AppCompatImageView) tabView.findViewById(R.id.tab_icon);
         icon.setColorFilter(getResources().getColor(R.color.tab_icon_color));
-
         title.setTextColor(getResources().getColor(R.color.tab_icon_color));
     }
 }

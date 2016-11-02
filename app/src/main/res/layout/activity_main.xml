@@ -4,15 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="128dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#FFFFFFFF">
+        android:background="@color/white_primary">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -32,6 +31,15 @@
             app:tabTextColor="@color/black_primary" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <test.movebox.fullscan.FullScanView
+        android:id="@+id/full_scan"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="40dp"
+        android:elevation="6dp" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
