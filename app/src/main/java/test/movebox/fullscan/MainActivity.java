@@ -33,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private SparseArray<Fragment> fragments;
     private TabLayout tabLayout;
     private int lastSelectTab;
+    private FullScanView fullScanView;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -106,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setCurrentItem(lastSelectTab);
 
         setSelectedTab(lastSelectTab);
+
+        fullScanView = (FullScanView) findViewById(R.id.full_scan);
+        fullScanView.setTabLayout(tabLayout);
     }
 
     @Override
@@ -119,8 +124,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_full_scan:
-                FullScanView fullScanView = (FullScanView) findViewById(R.id.full_scan);
+                fullScanView = (FullScanView) findViewById(R.id.full_scan);
                 fullScanView.startAnimation(lastSelectTab);
+
+                tabLayout.setVisibility(View.INVISIBLE);
+                toolbar.animate().alpha(0).setDuration(195).translationY(-DisplayUtil.dpToPx(8)).start();
                 break;
         }
 

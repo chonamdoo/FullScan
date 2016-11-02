@@ -30,8 +30,8 @@
             android:text="845MB"
             android:textColor="@color/white_primary"
             android:textSize="7sp"
-            android:visibility="invisible"
-            android:typeface="sans"/>
+            android:typeface="sans"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="title"
-        android:textColor="@color/black_disable"
+        android:textColor="@color/tab_icon_color"
         android:textSize="14sp"
         android:typeface="sans" />
 </LinearLayout>

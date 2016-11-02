@@ -39,6 +39,11 @@ public class DisplayUtil {
         return dp * density;
     }
 
+    public static int dpToPx(int dp) {
+        float density = HSApplication.getContext().getResources().getDisplayMetrics().density;
+        return Math.round((float) dp * density);
+    }
+
     public static DisplayMetrics getDisplayMetrics() {
         Resources resources = HSApplication.getContext().getResources();
         return resources.getDisplayMetrics();
@@ -57,5 +62,17 @@ public class DisplayUtil {
     public static int getScreenHeight() {
         Resources resources = HSApplication.getContext().getResources();
         return resources.getDisplayMetrics().heightPixels;
+    }
+
+    public static int getColor(int id) {
+        return HSApplication.getContext().getResources().getColor(id);
+    }
+
+    public static float getDimension(int id) {
+        return HSApplication.getContext().getResources().getDimension(id);
+    }
+
+    public static String getString(int id) {
+        return HSApplication.getContext().getResources().getString(id);
     }
 }
