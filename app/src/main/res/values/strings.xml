@@ -3,4 +3,6 @@
     <string name="main_tab_boost">BOOST</string>
     <string name="main_tab_clean">CLEAN</string>
     <string name="main_tab_security">SECURITY</string>
+    <string name="full_scan">FULL SCAN</string>
+    <string name="scan_all_the_items">scan all the items</string>
 </resources>

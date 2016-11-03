@@ -1,5 +1,7 @@
 package test.movebox.fullscan;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -128,7 +130,12 @@ public class MainActivity extends AppCompatActivity {
                 fullScanView.startAnimation(lastSelectTab);
 
                 tabLayout.setVisibility(View.INVISIBLE);
-                toolbar.animate().alpha(0).setDuration(195).translationY(-DisplayUtil.dpToPx(8)).start();
+                toolbar.animate().alpha(0).setDuration(195).setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+//                        toolbar.setVisibility(View.INVISIBLE);
+                    }
+                }).translationY(-DisplayUtil.dpToPx(8)).start();
                 break;
         }
 

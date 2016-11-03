@@ -14,4 +14,8 @@
     <color name="transparent">#00000000</color>    <!-- 70% -->
 
     <color name="tab_icon_color">#FF999999</color>
+
+    <color name="full_scan_red">#FFEF463D</color>
+    <color name="full_scan_yellow">#FFFDBE2F</color>
+    <color name="full_scan_blue">#FF42B7EF</color>
 </resources>
